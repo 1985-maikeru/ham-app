@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Counter from "./Counter";
 
 interface AppProps {
   //?をつける事で、オプショナルなプロパティにする必要がある
@@ -10,7 +11,11 @@ interface AppProps {
 //↑を使う事で、defaultPropsに不正な物を設定した時や違う型の物を渡した時にエラーを出してくれる
 //<>内に型引数を受け取る事ができる
 const App: React.FunctionComponent<AppProps> = ({ message }) => {
-  return <p>{message}</p>;
+  return (
+    <div>
+      <Counter />
+    </div>
+  );
 };
 
 App.defaultProps = {
